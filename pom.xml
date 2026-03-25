@@ -16,6 +16,12 @@
             <version>1.18.42</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>co.edu.uptc</groupId>
+            <artifactId>config-lib</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -26,18 +32,34 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
                             <mainClass>co.edu.uptc.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 

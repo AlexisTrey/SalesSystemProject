@@ -1,8 +1,10 @@
 package co.edu.uptc.config;
 
+import co.edu.uptc.configlib.PropertiesLoader;
+
 public class AppConfig {
     private static AppConfig instance;
-    private final GlobalConfig config = new GlobalConfig();
+    private final PropertiesLoader config = new PropertiesLoader();
 
     private AppConfig() {
         config.load("config/config.properties");
@@ -16,15 +18,15 @@ public class AppConfig {
     }
 
     public String get(String key) {
-        return config.getConfig(key);
+        return config.get(key);
     }
 
     public int getInt(String key, int defaultValue) {
-        return parseIntOrDefault(config.getConfig(key), defaultValue);
+        return parseIntOrDefault(config.get(key), defaultValue);
     }
 
     public double getDouble(String key, double defaultValue) {
-        return parseDoubleOrDefault(config.getConfig(key), defaultValue);
+        return parseDoubleOrDefault(config.get(key), defaultValue);
     }
 
     private int parseIntOrDefault(String value, int defaultValue) {

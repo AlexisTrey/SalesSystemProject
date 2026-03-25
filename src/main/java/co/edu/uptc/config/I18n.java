@@ -1,8 +1,10 @@
 package co.edu.uptc.config;
 
+import co.edu.uptc.configlib.PropertiesLoader;
+
 public class I18n {
     private static I18n instance;
-    private final GlobalConfig config = new GlobalConfig();
+    private final PropertiesLoader config = new PropertiesLoader();
 
     private I18n() {
         String lang = getLanguage();
@@ -17,7 +19,7 @@ public class I18n {
     }
 
     public String get(String key) {
-        String value = config.getConfig(key);
+        String value = config.get(key);
         return (value != null) ? value : key;
     }
 
