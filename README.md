@@ -119,4 +119,4 @@ El proyecto utiliza las siguientes dependencias:
 
 ## Versión
 
-**1.0**
+**1.0.0**
