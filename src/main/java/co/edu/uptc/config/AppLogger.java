@@ -24,7 +24,8 @@ public class AppLogger {
         }
     }
 
-    private AppLogger() {}
+    private AppLogger() {
+    }
 
     public static void error(Class<?> origin, String msg, Throwable cause) {
         LOGGER.log(Level.SEVERE, "[" + origin.getSimpleName() + "] " + msg, cause);

@@ -18,6 +18,7 @@ Código: 202222448
 * Maven
 * Lombok
 * Arquitectura MVP
+* Interfaz gráfica con Java Swing
 * Persistencia en archivos CSV
 * Internacionalización (i18n)
 * Estructuras de datos personalizadas
