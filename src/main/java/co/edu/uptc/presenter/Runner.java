@@ -4,7 +4,7 @@ import co.edu.uptc.interfaces.ModelInterface;
 import co.edu.uptc.interfaces.PresenterInterface;
 import co.edu.uptc.interfaces.ViewInterface;
 import co.edu.uptc.model.ModelImplement;
-import co.edu.uptc.view.ConsoleView;
+import co.edu.uptc.view.SwingView;
 
 public class Runner {
     private ModelInterface model;
@@ -13,7 +13,7 @@ public class Runner {
 
     public void makeMVP() {
         model = new ModelImplement();
-        view = new ConsoleView();
+        view = new SwingView();
         presenter = new MainPresenter();
 
         presenter.setModel(model);

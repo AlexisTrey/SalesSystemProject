@@ -6,7 +6,7 @@
 
     <groupId>co.edu.uptc</groupId>
     <artifactId>SalesSystemProject</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
 
     <dependencies>
         <!-- Source: https://mvnrepository.com/artifact/org.projectlombok/lombok -->

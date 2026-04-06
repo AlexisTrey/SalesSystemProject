@@ -10,7 +10,6 @@ import co.edu.uptc.pojo.Product;
 import co.edu.uptc.interfaces.ModelInterface;
 import co.edu.uptc.interfaces.PresenterInterface;
 import co.edu.uptc.interfaces.ViewInterface;
-import co.edu.uptc.util.DateFormatter;
 import co.edu.uptc.util.DateUtil;
 
 import java.time.LocalDateTime;
